@@ -1,0 +1,9 @@
+
+#register-form, #login-form {
+	width : 80%;
+	margin: 0px auto;
+}
+.system-users, .system-cards {
+	padding: 5px;
+    border: 1px solid #ddd;
+}

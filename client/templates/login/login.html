@@ -1,0 +1,12 @@
+<template name="login">
+	<h2>{{_ 'Login'}}</h2>
+	<div>{{#if alert}}{{_ alert}}{{/if}}</div>
+	<form id="login-form">
+		{{#each fields}}
+			<div class="form-group">
+				<input id="{{id}}" class="form-control" type="{{type}}" placeholder="{{_ label}}" />
+			</div>
+		{{/each}}
+		<input type="submit" class="btn btn-default" value="{{_ 'Login'}}" />
+	</form>
+</template>

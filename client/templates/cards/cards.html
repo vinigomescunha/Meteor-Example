@@ -1,0 +1,23 @@
+<template name="cards">
+	<div class="col-md-12 text-center">
+		<h2>{{_ "My Cards"}}</h2>
+		<form id="cards-form" class="form-inline">
+			<div>{{#if alert}}{{_ alert}}{{/if}}</div>
+			{{#each fields}}
+				<div class="form-group">
+					<input id="{{id}}" class="form-control" type="{{type}}" placeholder="{{_ label}}" />
+				</div>
+			{{/each}}
+			<input type="submit" value="{{_ 'Add Card'}}" />
+		</form>
+	</div>
+	<div class="col-md-12 text-center">
+		<h2>{{_ 'All Cards'}}</h2>
+		{{#each cards}}
+			<div class="col-md-4 system-cards">
+				Nome : {{name}} <br />
+				Descrição: {{{description}}}
+			</div>
+		{{/each}}
+	</div>
+</template>

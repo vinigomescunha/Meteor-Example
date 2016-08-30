@@ -1,0 +1,12 @@
+<template name="register">
+	<h2>{{_ 'Register'}}</h2>
+	<div>{{#if alert}}{{_ alert}}{{/if}}</div>
+	<form id="register-form">
+		{{#each fields}}
+			<div class="form-group">
+				<input id="{{id}}" class="form-control" type="{{type}}" placeholder="{{_ label}}" />
+			</div>
+		{{/each}}
+		<input type="submit" class="btn btn-default" value="{{_ 'Register'}}" />
+	</form>
+</template>

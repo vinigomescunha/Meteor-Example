@@ -1,0 +1,20 @@
+{ 
+	"Type Your Email": "Digite seu email...",
+	"Type Your Name" : "Digite seu nome...",
+	"Type Your Password" : "Digite sua senha...",
+	"Login Error" : "Ocorreu um erro durante o login!",
+	"Register Success" : "Registrado com Sucesso!",
+	"Register Error" : "Ocorreu um erro durante o registro do usuário!",
+	"Card Added" : "Card Adicionado com sucesso!",
+	"Card Error" : "Ocorreu um erro durante a inserção",
+	"logout" : "Sair",
+	"Login" : "Autenticação no Sistema",
+	"Register" : "Registro de Usuario",
+	"Hi" : "Oi",
+	"Register" : "Registrar",
+	"Login" : "IR",
+	"New Users" : "Novos Usuários",
+	"My Cards" : "Meus Cards",
+	"All Cards" : "Todos os Cards",
+	"Add Card" : "Adicionar Novo Card"
+}
