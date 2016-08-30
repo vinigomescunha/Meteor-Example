@@ -1,6 +1,10 @@
 getUserLanguage = function () {
   // Put here the logic for determining the user language
-  return 'br'
+  lang = FlowRouter.getQueryParam('lang')
+  if (lang)
+    return lang
+  else
+    return 'br'
 }
 
 if (Meteor.isClient) {
