@@ -11,7 +11,6 @@ if (Meteor.isClient) {
       })
       .fail(function (error_message) {
         // Handle the error situation
-        console.log(error_message)
       })
   })
 }

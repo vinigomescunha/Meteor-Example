@@ -13,17 +13,17 @@ System = {
     fields: function () {
       return [
         {
-          id: 'name',
+          id: 'register-name',
           type: 'text',
           label: 'Type Your Name'
         },
         {
-          id: 'email',
+          id: 'register-email',
           type: 'email',
           label: 'Type Your Email'
         },
         {
-          id: 'password',
+          id: 'register-password',
           type: 'password',
           label: 'Type Your Password'
         }
@@ -36,10 +36,10 @@ System = {
       event.preventDefault()
       user = {
         profile: {
-          'name': template.$('#name').val()
+          'name': template.$('#register-name').val()
         },
-        password: template.$('#password').val(),
-        email: template.$('#email').val()
+        password: template.$('#register-password').val(),
+        email: template.$('#register-email').val()
       }
 
       Meteor.call('newUser', user, function (error, result) {
@@ -49,7 +49,8 @@ System = {
           template.alert.set('Register Error')
 
         Meteor.setTimeout(function () {
-          template.find('form').reset()
+          if (template.find('form'))
+            template.find('form').reset()
           template.alert.set('')
         }, 3000)
       })
@@ -79,12 +80,12 @@ System = {
     fields: function () {
       return [
         {
-          id: 'email',
+          id: 'login-email',
           type: 'email',
           label: 'Type Your Email'
         },
         {
-          id: 'password',
+          id: 'login-password',
           type: 'password',
           label: 'Type Your Password'
         }
@@ -96,7 +97,7 @@ System = {
     'submit #login-form': function (event, template) {
       event.preventDefault()
 
-      Meteor.loginWithPassword(template.$('#email').val(), template.$('#password').val(), function (error, result) {
+      Meteor.loginWithPassword(template.$('#login-email').val(), template.$('#login-password').val(), function (error, result) {
         if (!error && Meteor.userId())
           FlowRouter.go('Cards')
         else
@@ -104,7 +105,9 @@ System = {
 
         Meteor.setTimeout(function () {
           // prevent brute force client :p
-          template.find('form').reset()
+          if (template.find('form'))
+            template.find('form').reset()
+
           template.alert.set('')
         }, 3000)
       })
@@ -155,7 +158,8 @@ System = {
         else
           template.alert.set('Card Error')
 
-        template.find('form').reset()
+        if (template.find('form'))
+          template.find('form').reset()
         Meteor.setTimeout(function () {
           template.alert.set('')
         }, 3000)
