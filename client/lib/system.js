@@ -144,6 +144,7 @@ System = {
       event.preventDefault()
 
       card = {
+        uid: Meteor.userId(),
         name: template.$('#name').val(),
         description: template.$('#description').val()
       }

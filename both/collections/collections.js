@@ -13,6 +13,10 @@ Schema.cards = new SimpleSchema({
   description: {
     type: String,
     optional: false
+  },
+  uid: {
+    type: String,
+    optional: false
   }
 })
 

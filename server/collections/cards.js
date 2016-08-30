@@ -1,6 +1,6 @@
 Cards.allow({
   insert: function (userId, doc) {
-    if (userId)
+    if (userId !== undefined && doc.uid === userId)
       return true
     return false
   },
